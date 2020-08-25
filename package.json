@@ -4,7 +4,7 @@
   "description": "single-page",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --open --hot",
+    "start": "webpack-dev-server --open --hot",
     "build": "webpack --mode=development --progress --hide-modules",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
