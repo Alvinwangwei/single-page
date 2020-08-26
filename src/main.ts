@@ -20,3 +20,7 @@ let user = new Student('Jane', 'M.', "user")
 console.log(user)
 
 console.log(greeter(user))
+
+
+console.log(1111)
+
