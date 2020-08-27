@@ -1,6 +1,6 @@
 const path = require('path')
-console.log(path.resolve(__dirname))
 const htmlWebpackPlugin = require('html-webpack-plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 let config = {
     entry: './src/main.ts',
@@ -17,6 +17,7 @@ let config = {
         //     template: './public/index.html',
         //     filename: 'index.html'
         // })
+        new VueLoaderPlugin()
     ],
     devtool: 'source-map',
     resolve: {
@@ -25,6 +26,12 @@ let config = {
     },
     module: {
         rules: [
+            {
+                test: /\.vue$/,
+                use: {
+                    loader: 'vue-loader'
+                }
+            },
             {
                 test: /\.tsx?$/,
                 use: {

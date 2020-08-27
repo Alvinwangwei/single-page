@@ -1,11 +1,11 @@
 {
     "compilerOptions": {
-        "module": "commonjs", // 编译出的代码采用的模块规范
-        "target": "es6", // 编译出的代码采用 ES 的哪个版本
-        "sourceMap": true, // 输出 Source Map 方便调试
-        "importHelpers": true // 减少代码的冗余，类似：@babel/plugin-transform-runtime
-    },
-    "exclude": [ // 不编译这些目录里的文件
-        "node_modules"
-    ]
+        // 与 Vue 的浏览器支持保持一致
+        "target": "es5",
+        // 这可以对 `this` 上的数据 property 进行更严格的推断
+        "strict": true,
+        // 如果使用 webpack 2+ 或 rollup，可以利用 tree-shake:
+        "module": "es2015",
+        "moduleResolution": "node"
+    }
   }
