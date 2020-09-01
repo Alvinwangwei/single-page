@@ -22,7 +22,11 @@ let config = {
     devtool: 'source-map',
     resolve: {
         // Add '.ts' and '.tsx' as resolvable extensions.
-        extensions: [".ts", ".tsx", ".js", ".json"]
+        extensions: [".ts", ".tsx", ".js", ".json"],
+        alias: {
+            '@': path.resolve(__dirname, 'src'),
+            '_c': path.resolve(__dirname, 'src/components')
+        }
     },
     module: {
         rules: [
@@ -37,7 +41,21 @@ let config = {
                 use: {
                     loader: 'ts-loader'
                 }
-            }
+            },
+            {
+                test: /\.sass$/,
+                use: [
+                    {
+                        loader: 'css-loader'
+                    },
+                    {
+                        loader: 'style-loader'
+                    },
+                    {
+                        loader: 'sass-loader'
+                    }
+                ]
+            },
         ]
     },
 }

@@ -2,10 +2,13 @@
     <div>
         {{count}}
         <button @click="bindAdd">add</button>
+        <my-toast></my-toast>
     </div>
 </template>
 
 <script>
+// src/components/Toast/index
+import myToast from '../../components/Toast/index.vue'
 
 export default {
     data() {
@@ -25,10 +28,13 @@ export default {
         count() {
             return this.$store.state.a.count
         }
+    },
+    components: {
+        myToast
     }
 }
 </script>
 
-<style scoped>
+<style lang='scss' scoped>
 
 </style>

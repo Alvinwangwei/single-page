@@ -6,6 +6,7 @@ import store from './store/index'
 
 import App from './app.vue'
 
+
 new Vue({
     router,
     store,
