@@ -43,18 +43,8 @@ let config = {
                 }
             },
             {
-                test: /\.sass$/,
-                use: [
-                    {
-                        loader: 'css-loader'
-                    },
-                    {
-                        loader: 'style-loader'
-                    },
-                    {
-                        loader: 'sass-loader'
-                    }
-                ]
+                test: /\.scss$/,
+                use: [ 'style-loader', 'css-loader', 'sass-loader']
             },
         ]
     },
