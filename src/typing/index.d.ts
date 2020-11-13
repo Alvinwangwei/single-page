@@ -1,5 +1,3 @@
-// types/foo/index.d.ts
-
 export declare const name: string;
 export declare function getName(): string;
 export declare class Animal {

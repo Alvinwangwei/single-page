@@ -9,13 +9,7 @@ import router from './router/index'
 
 import store from './store/index'
 
-
 Vue.use(ElementUI)
-
-
-import myToast from './components/Toast/index.ts'
-Vue.use(myToast)
-
 
 Vue.filter('globalFilter', function (val: any) {
     return val + 'global'
